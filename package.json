@@ -1,0 +1,32 @@
+{
+  "name": "greencity-playwright",
+  "version": "1.0.0",
+  "description": "Automated E2E tests for the GreenCity web application (Playwright + TypeScript + Allure).",
+  "type": "commonjs",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results",
+    "report": "playwright test && allure generate allure-results --clean -o allure-report && allure open allure-report"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "allure",
+    "greencity",
+    "e2e"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "allure-commandline": "^2.32.0",
+    "allure-playwright": "^2.15.1",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.7.2"
+  }
+}
